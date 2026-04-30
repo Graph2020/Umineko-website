@@ -17,7 +17,7 @@
 }
 
 @utility title-hero {
-  @apply font-main text-center text-5xl font-black;
+  @apply font-main text-center text-4xl font-black min-[425px]:text-5xl;
 }
 
 @utility title-sub {
@@ -26,4 +26,8 @@
 
 @utility span-burger {
   @apply inline-block h-1.5 w-8 bg-white;
+}
+
+@utility paragraph {
+  @apply font-body mt-5 text-center text-base text-white sm:w-lg lg:text-lg;
 }

@@ -4,7 +4,7 @@ import React from "react";
 
 const Burger = (): JSX.Element => {
   return (
-    <button className="flex flex-col gap-1.5 pt-0.5">
+    <button className="flex flex-col gap-1.5 pt-0.5 sm:hidden">
       <span className="span-burger"></span>
       <span className="span-burger"></span>
     </button>
