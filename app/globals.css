@@ -25,9 +25,57 @@
 }
 
 @utility span-burger {
-  @apply inline-block h-1.5 w-8 bg-white;
+  @apply absolute inline-block h-1.5 w-8 bg-white;
 }
 
 @utility paragraph {
   @apply font-body mt-5 text-center text-base text-white sm:w-lg lg:text-lg;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.toggle-shadow {
+  box-shadow:
+    inset 4px 0 5px 0 var(--color-gold-main),
+    inset -4px 0 5px 0 var(--color-blue-main);
+}
+
+.active-link {
+  position: relative;
+  z-index: 1;
+  padding: 2px 1px;
+  border-radius: 0.5rem;
+}
+
+.active-link::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 70%,
+    var(--color-gold-main)
+  );
+  border-radius: inherit;
+  animation: rotate 4s linear infinite;
+
+  padding: 2px;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
