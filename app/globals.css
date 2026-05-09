@@ -29,18 +29,27 @@
 }
 
 @utility paragraph {
-  @apply font-body mt-5 text-center text-base text-white sm:w-lg lg:text-lg;
+  @apply font-body text-center text-base text-white sm:w-lg lg:text-lg;
 }
+
+@utility btn-glow {
+  /* 1. A subtle tinted border to define the edge of the glass */
+  border: 1px solid rgba(250, 215, 0, 0.3);
+
+  /* 2. The layered shadows */
+  box-shadow: 
+    /* OUTER GLOW: The soft, blurred golden aura bleeding outside */
+    0 0 20px 2px rgba(250, 215, 0, 0.4),
+    /* INNER TOP HIGHLIGHT: The bright reflection on the top edge */ inset 0 2px
+      4px rgba(255, 255, 255, 0.4),
+    /* INNER BOTTOM GLOW: A soft gold reflection inside the bottom edge */ inset
+      0 -4px 10px rgba(250, 215, 0, 0.2);
+}
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
-}
-
-.toggle-shadow {
-  box-shadow:
-    inset 4px 0 5px 0 var(--color-gold-main),
-    inset -4px 0 5px 0 var(--color-blue-main);
 }
 
 .active-link {

@@ -42,6 +42,14 @@ const ToggleBgPhone = ({ isOpen }: { isOpen: boolean }): JSX.Element | null => {
     () => {
       if (!mounted) return;
 
+      gsap.to(".edge-beam", {
+        opacity: 0.3,
+        duration: 1.5,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
       const linksSplited = new SplitText(".toggle-link", { type: "words" });
 
       tl.current = gsap.timeline({ paused: true });
@@ -115,8 +123,24 @@ const ToggleBgPhone = ({ isOpen }: { isOpen: boolean }): JSX.Element | null => {
     <div
       ref={navMenuRef}
       style={{ transform: "translateY(-120%)" }}
-      className="toggle-shadow center-content fixed inset-0 z-40 h-dvh w-dvw flex-col gap-1.5 bg-black outline-4 sm:hidden"
+      className="center-content fixed inset-0 z-40 h-dvh w-dvw flex-col gap-1.5 bg-black outline-4 sm:hidden"
     >
+      <div
+        className="edge-beam pointer-events-none absolute top-0 bottom-0 left-0 z-50 w-1.5"
+        style={{
+          background:
+            "linear-gradient(to right, var(--color-gold-main), transparent)",
+        }}
+      />
+
+      <div
+        className="edge-beam pointer-events-none absolute top-0 right-0 bottom-0 z-50 w-1.5"
+        style={{
+          background:
+            "linear-gradient(to left, var(--color-blue-main), transparent)",
+        }}
+      />
+
       {displayLinks}
 
       <span ref={butterflyRef} className="absolute top-1/6 left-1/6">

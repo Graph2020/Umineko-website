@@ -88,7 +88,7 @@ const PreviewLinks = (): JSX.Element => {
   };
 
   return (
-    <nav
+    <div
       onMouseMove={handleMouseMove}
       className="center-content hidden gap-1.5 lg:flex"
     >
@@ -101,7 +101,7 @@ const PreviewLinks = (): JSX.Element => {
               alt="Preview"
               width={300}
               height={300}
-              className="size-75 scale-0 transform-gpu object-cover object-center opacity-0"
+              className="size-75 scale-0 transform-gpu rounded-xl object-cover object-center opacity-0"
             />
           </div>,
           document.body,
@@ -118,7 +118,7 @@ const PreviewLinks = (): JSX.Element => {
           {link.name}
         </Link>
       ))}
-    </nav>
+    </div>
   );
 };
 

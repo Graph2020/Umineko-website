@@ -31,7 +31,7 @@ export const navigationLinks: NavigationLinks[] = [
     name: "Soundtrack",
     href: "/soundtrack",
     id: 4,
-    imagePreview: "/images/soundtrack.jpeg",
+    imagePreview: "/images/soundtrack.png",
     icon: IoMusicalNotes,
   },
 ];
