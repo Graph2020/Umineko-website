@@ -9,7 +9,7 @@
 }
 
 @utility page-container {
-  @apply h-full w-full p-5;
+  @apply min-h-screen w-full p-5;
 }
 
 @utility center-content {
@@ -37,7 +37,7 @@
   border: 1px solid rgba(250, 215, 0, 0.3);
 
   /* 2. The layered shadows */
-  box-shadow: 
+  box-shadow:
     /* OUTER GLOW: The soft, blurred golden aura bleeding outside */
     0 0 20px 2px rgba(250, 215, 0, 0.4),
     /* INNER TOP HIGHLIGHT: The bright reflection on the top edge */ inset 0 2px

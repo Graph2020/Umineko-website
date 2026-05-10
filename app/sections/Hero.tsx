@@ -83,7 +83,7 @@ const Hero = (): JSX.Element => {
         <h2 ref={subtitleRef} className="title-sub italic">
           No naku koro ni
         </h2>
-        <ParagraphAnimation className="paragraph my-5 [text-shadow:_0_4px_4px_rgba(0,0,0,0.5)]">
+        <ParagraphAnimation className="paragraph my-5 [text-shadow:0_4px_4px_rgba(0,0,0,0.5)]">
           Step onto the cursed island of Rokkenjima, where a wealthy
           family&apos;s reunion becomes a tale of mystery, tragedy, and the
           golden witch. Will you solve the riddles or fall prey to the endless
